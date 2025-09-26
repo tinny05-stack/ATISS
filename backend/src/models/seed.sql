@@ -1,0 +1,1 @@
+-- Example plan seeds could live in code; DB remains minimal

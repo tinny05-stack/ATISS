@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATISS — Session Status</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>My Status✅</h1>
+    <div class="row">
+      <input id="statusPhone" placeholder="07XXXXXXXX" />
+      <button id="btnStatus">Check</button>
+    </div>
+    <pre id="statusOut"></pre>
+  </div>
+  <script>
+    const api = localStorage.getItem('api') || 'http://localhost:8080/api';
+    document.getElementById('btnStatus').onclick = async () => {
+      const phone = document.getElementById('statusPhone').value.trim();
+      const res = await fetch(`${api}/sessions/${encodeURIComponent(phone)}`);
+      const data = await res.json();
+      document.getElementById('statusOut').textContent = JSON.stringify(data, null, 2);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "atiss-backend",
+  "version": "1.0.0",
+  "description": "Any Time Internet Service System Backend",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATISS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h1>ATISS</h1>
+  <p class="subtitle">Any Time Internet Service System</p>
+
+  <!-- Payment Section -->
+  <div id="payment-section">
+    <h2>Subscription - TZS 1000/24hrs</h2>
+    <input type="text" id="phone" placeholder="Enter phone number" />
+    <button id="payBtn">Pay Now</button>
+  </div>
+
+  <!-- OTP Section -->
+  <div id="otp-section" style="display:none;">
+    <label for="otp">Enter OTP:</label>
+    <input type="text" id="otp" placeholder="6-digit OTP" />
+    <button id="verifyOtpBtn">Verify OTP</button>
+  </div>
+
+  <div id="status"></div>
+</div>
+
+ <!-- Admin Login Button -->
+  <button id="adminLoginBtn" class="admin-btn">👤</button>
+  <p class="adminlogin-txt">Admin Login</p>
+
+  <!-- Admin Login Modal -->
+  <div id="adminModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Admin Login</h2>
+      <label for="adminUser">Username:</label>
+      <input type="text" id="adminUser" placeholder="Enter username" />
+      
+      <label for="adminPass">Password:</label>
+      <input type="password" id="adminPass" placeholder="Enter password" />
+      
+      <button id="adminLoginSubmit">Login</button>
+      <p id="adminMessage"></p>
+    </div>
+  </div>
+  
+
+<!-- Admin Dashboard Section (hidden by default) -->
+<div id="admin-dashboard" style="display:none;">
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <div id="admin-users-section">
+      <h2>Registered Users</h2>
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>Phone</th>
+            <th>Payment Date</th>
+            <th>Expiry</th>
+            <th>Time Remaining</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Users will be populated here -->
+        </tbody>
+      </table>
+      <p id="adminStatus"></p>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
